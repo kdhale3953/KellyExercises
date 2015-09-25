@@ -6,8 +6,7 @@ import arcpy
 from arcpy import env
 
 # Set environment settings
-env.workspace = "C:/data"
-
+env.workspace = "P://Python/Book_exer/Data/Exercise05/Results"
 # Set local variables
 inCover = "parks"
 outCover = "P://Python/Book_exer/Data/Exercise05/Results/Parks_dissolve"
