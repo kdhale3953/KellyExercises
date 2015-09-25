@@ -1,3 +1,38 @@
 Challenge one:
 
+To add xy coordinates:
+
+here is some example code:
+
+# Name: AddXY_Example.py
+# Description: Adds X and Y coordinates to a coverage's point attribute table
+# Requirements: ArcInfo Workstation
+
+# Import system modules
+import arcinfo
+import arcpy
+from arcpy import env
+
+# Set environment settings
+env.workspace = "C:/data"
+
+# Set local variables
+inCover = "wells"
+featureType = "POINT"
+
+#Execute AddXY
+arcpy.AddXY_arc(inCover, featureType)
+
+
+The parameters that are required are:
+
+in_cover The coverage containing points or polygon labels whose x,y coordinates will become attributes in the PAT, or in the coverage containing nodes, to the NAT.
+ Coverage 
+ feature_type
+ (Optional) Type of coverage feature whose x,y coordinates will become feature attributes.
+
+ POINT —Point feature coordinates to be added to the PAT including label points. This is the default option. 
+ NODE —Node feature coordinates to be added to the NAT. 
+  String 
+
 
