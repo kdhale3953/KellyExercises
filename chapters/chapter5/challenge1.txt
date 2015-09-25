@@ -35,4 +35,50 @@ in_cover The coverage containing points or polygon labels whose x,y coordinates 
  NODE —Node feature coordinates to be added to the NAT. 
   String 
 
+The dissolve tool can be accessed by using the following code as an example:
+
+# Name: Dissolve_Example.py
+# Description: Dissolves polygons into larger sections
+# Requirements: ArcInfo Workstation
+
+# Import system modules
+import arcpy
+from arcpy import env
+
+# Set environment settings
+env.workspace = "C:/data"
+
+# Set local variables
+inCover = "tra_airport"
+outCover = "C:/output/airport_sect"
+dissolveItem = "section"
+featureType = "POLY"
+
+# Execute Dissolve
+arcpy.Dissolve_arc(inCover, outCover, dissolveItem, featureType)
+  
+
+The required parameters are:
+
+in_cover The coverage containing features to be dissolved.
+ Coverage 
+ out_cover The coverage to be created. The output coverage cannot already exist.
+  Coverage 
+  dissolve_item The item in the in_cover feature attribute table that is used to dissolve features.
+
+  Dissolve_item—An item name will be used to perform the dissolve. The item may be a redefined item. 
+  #ALL—All items past the cover-ID in the PAT, AAT, or region subclass PAT will be used as a single dissolve item. If there are no items past the cover-ID, then the cover-ID will be used. 
+   String 
+   feature_type
+   (Optional) The feature classes to be preserved in the output coverage:
+
+   POLY —Polygons will be dissolved; an AAT will not be created for the output coverage. This is the default option. 
+   LINE —Nodes will be dissolved; a PAT will not be created for the output coverage. 
+   NET —Polygons will be dissolved, and both a PAT and AAT will be created for the output coverage. 
+   REGION.subclass —Region subclass will be dissolved, and all existing attributes of the input coverage will be maintained in the output coverage. 
+    String 
+
+    defaults are as follows:
+    
+    For the dissolve tool:
 
