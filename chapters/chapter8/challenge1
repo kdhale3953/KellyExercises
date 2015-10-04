@@ -1,0 +1,1 @@
+"""This code creates a new polygon feature class containing a single square polygon with the following coordinates:(0,0)(0,1000) (1000,0)(1000,1000))"""
