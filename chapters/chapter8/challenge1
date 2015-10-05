@@ -1,1 +1,18 @@
 """This code creates a new polygon feature class containing a single square polygon with the following coordinates:(0,0)(0,1000) (1000,0)(1000,1000))"""
+
+
+import arcpy
+import fileinput
+import string
+import os
+
+from arcpy import env
+env.workspace = "P:/Python/Book_exer/Data/Exercise08/Results"
+
+env.overwriteOutput = True
+outpath =  "P:/Python/Book_exer/Data/Exercise08/Results"
+new fc = "Results/newpolygon.shp"
+
+arcpy.CreateFeatureclass_management(outpath, newfc, "Polygon") 
+infile = "P:/Python/Book_exer/Data/Exercise08/Coordinates.txt"
+"
