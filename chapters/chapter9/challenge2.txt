@@ -1,0 +1,13 @@
+"""This code copies all the rasters in a workspace to a new file geodatabase"""
+
+import arcpy
+from arcpy import env
+env.workspace = "P://Python/Book_exer/ex9"
+arcpy.RasterToGeodatabase_conversion("landcover.tif; Elevation, tm.img",\"P:\Python\Book_exer\To.gdb\catalog")
+
+
+
+
+
+
+

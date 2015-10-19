@@ -1,0 +1,17 @@
+"""This code should determine what areas meet the following criteria:
+moderate slope (between 5 and 20 degrees), southerly aspect (between 150 and 270 degrees), and is forested (LC types 41,42,or43)"""
+
+import arcpy
+from arcpy import env
+env.workspace = "P:Python/Book_exer/ex9"
+rasterlist = ListRasters()
+from arcpy.sa.import *
+outraster2 = aspect("elevation")
+outraster2.save("aspect")
+aspect = <149 and >271
+slope = slope (elevraster)
+goodslope = slope <4 and >21
+goodfinal = goodslope and aspect
+my remap = RemapValue([[41,1][,[42,2],[43,3]])
+outclass = Reclassify("landcover.tif", "VALUE",myremap,"NODATA"
+outreclass.save("lc_recl")
