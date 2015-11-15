@@ -1,0 +1,6 @@
+Challenge 2 errors:
+
+1.On line 3 there is a backslash instead of a forward slash.
+2. On line 5 the D in describe should be capitalized.
+3. On line 10, the print statement should be indented.:wq
+

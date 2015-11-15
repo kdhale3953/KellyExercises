@@ -1,0 +1,8 @@
+errors found in the first challenge are as follows:
+
+
+
+1. Feature class should be fc instead of FC
+2. On line 8 there should be a ":" after NAME
+3. There is an indentation error on line 9 where the print statement is
+4. On line 8 it should be =, not ==
